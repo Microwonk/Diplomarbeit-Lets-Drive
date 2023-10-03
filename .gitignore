@@ -1,0 +1,12 @@
+
+# -- alle files die bei compile time entstehen
+/*.aux
+/*.fls
+/*.fdb_latexmk
+/*.lof
+/*.log
+/*.lol
+/*.lot
+/*.pdf
+/*.gz
+/*.toc
