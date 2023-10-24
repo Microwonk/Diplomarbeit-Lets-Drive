@@ -1,24 +1,12 @@
 \documentclass[ngerman,
-	a4paper,     %% defines the paper size: a4paper (default), a5paper, letterpaper, ...
-	% landscape,   %% sets the orientation to landscape
-	oneside,     %% changes to a two-page-layout (alternatively: oneside)
-	%autooneside,
-	% twocolumn,   %% changes to a two-column-layout
-	%headsepline, %% add a horizontal line below the column title
-	%footsepline, %% add a horizontal line above the page footer
-	% titlepage,   %% only the titlepage (using titlepage-environment) appears on the first page (alternatively: notitlepage)
-	parskip,     %% insert an empty line between two paragraphs (alternatively: halfparskip, ...)
-	% leqno,       %% equation numbers left (instead of right)
-	fleqn,       %% equation left-justified (instead of centered)
-	% tablecaptionabove, %% captions of tables are above the tables (alternatively: tablecaptionbelow)
-	% draft,       %% produce only a draft version (mark lines that need manual edition and don't show graphics)
-	bibliography=totoc,index=totoc,listof=totoc, %Literaturverzeichnis usw auch in die Inhaltsangabe
-	% 10pt,       %% set default font size to 10 point 
-	12pt,         %% set default font size to 12 point
-	%11pt         %% set default font size to 11 point
-	%DIV=10, 
+	a4paper,
+	oneside,
+	parskip,
+	fleqn,  
+	bibliography=totoc,index=totoc,listof=totoc, 
+	12pt,
 	BCOR=10mm,
-]{scrreprt}  %% article, see KOMA documentation (scrguide.dvi) 
+]{scrreprt}
 
 % Für oft geforderte 1,5 Zeilenhöhe
 \usepackage{setspace}
@@ -26,24 +14,19 @@
 
 \usepackage{float}
 
-%\KOMAoption{fontsize=14pt}
-
 % natbib für deutsche Zitate
-%\usepackage[numbers,sort&compress,super]{natbib}
 \usepackage[]{natbib}
 
 \usepackage{import}
 
-%\usepackage[american]{babel}
 \usepackage[ngerman]{babel}
 \usepackage{blindtext}
 
-%%% inputenc: coding of german special characters
+% inputenc: coding of german special characters
 \usepackage[utf8]{inputenc}
 
-%%% fontenc, ae, aecompl: coding of characters in PDF documents
+% fontenc, ae, aecompl: coding of characters in PDF documents
 \usepackage[T1]{fontenc}
-%\usepackage{ae,aecompl}
 \usepackage{lmodern}
 
 \makeatletter
@@ -54,9 +37,9 @@
 \usepackage[formats]{listings}
 \lstdefineformat{csharp}
 {
-\{=\newline\string\newline\indent,%
-\}=\newline\noindent\string\newline,%
-;=[\ ]\string\space,%
+\{=\newline\string\newline\indent,
+\}=\newline\noindent\string\newline,
+;=[\ ]\string\space,
 }
 \usepackage{color}
 \definecolor{csharpblue}{RGB}{0,0,255}
@@ -84,12 +67,8 @@
 }
 
 %Copyrights 
-% graphicx mus bei Verwendung auskommentiert werden
-% ohne textcomp gab es warning 
 \usepackage{textcomp}
 \usepackage{caption, copyrightbox}
-% Schriftart für copyrights ändern, da es sonst Warnung 
-% gab wegen deprecated Schriftart
 \makeatletter 
 \renewcommand{\CRB@setcopyrightfont}{%
 	\footnotesize
@@ -113,21 +92,11 @@
 }
 \makeatother 
 
-%\usepackage{pdfpages}
-
-\usepackage{enumitem} %For list environments
+\usepackage{enumitem}
 \setlist{itemsep=-1em,topsep=-1em}
 
 
 \usepackage[babel=true,strict=true,german=quotes,threshold=1]{csquotes}
-
-
-% \publishers{}
-
-% \thanks{} %% use it instead of footnotes (only on titlepage)
-
-% \dedication{} %% generates a dedication-page after titlepage
-
 
 \usepackage{amsmath}
 \numberwithin{equation}{section}
@@ -136,19 +105,9 @@
 
 \usepackage[noabbrev]{cleveref}
 
-%%% scrheadings default: 
-%%%      footer - middle: page number
 \pagestyle{scrheadings}
 
-%\pagestyle{empty} % Seiten ohne Header
-%
-% loescht voreingestellte Stile
 \clearpairofpagestyles
-
-%
-% Was steht wo...
-%\ohead{\headmark - \pagemark}
-%\ihead{\headmark}
 
 \input{inp_titlepage_kolleg.tex}
 
@@ -162,17 +121,12 @@
 
 %Muss in der Reihenfolge stehen!:
 \automark[subsection]{section}
-%\ohead{\pagemark}
 \ihead{\newtitle}
-%\lehead{\rightmark}
-%\lohead{\leftmark}
-%\lefoot{Ausgearbeitet von \ldots}
-%\refoot{Skriptum Thermodynamik}
 \rofoot{Seite \thepage{}}
 \lofoot{Verantwortlich für den Inhalt: \currentAuthor}
 
-\newcaptionname{ngerman}{\lstlistlistingname}{Quelltexte} %Table of listings 
-\newcaptionname{ngerman}{\lstlistingname}{Quelltext}      %Listing
+\newcaptionname{ngerman}{\lstlistlistingname}{Quelltexte}
+\newcaptionname{ngerman}{\lstlistingname}{Quelltext}
 \lstMakeShortInline[columns=fixed]|
 
 \maketitle
@@ -189,7 +143,6 @@
 \input{inp_content.tex}
 
 \bibliographystyle{dinat}
-%\bibliographystyle{plainurl}
 \bibliography{Literatur_Verzeichnis}
 
 \appendix
