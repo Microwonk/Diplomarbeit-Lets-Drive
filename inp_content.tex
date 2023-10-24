@@ -3,34 +3,140 @@
 
 \chapter*{Einleitende Bemerkungen}
 
+
+
 \chapter*{Notationen}
 Beschreibung wie Code, Hinweise, Zitate etc. formatiert werden  
 
+
+
 \chapter{Einleitung}
+
+
 
 \chapter{Projektmanagement}
 
+
+
 \section{Metainformationen}
+
+
+
 \subsection{Team}
+
+
+
 \subsection{Betreuer}
+
+
+
 \subsection{Partner}
+
+
+
 \subsection{Ansprechpartner}
+
+
+
 \section{Vorerhebungen}
+In den Vorerhebungen werden der IST - Zustand und der SOLL - Zustand genau erklärt. Eine Zielformulierung beschreibt das erwartete Ergebnis eindeutig, attraktiv, realistisch und messbar mit konkreten Terminen. Einfluss, Nähe und Einstellung der Stakeholder und Maßnahmen für diese werden graphisch und tabellarisch dargestellt.
+
+
+
 \subsection{Projektzieleplan}
-Projektziele-Hierarchie - SMART
+Ziel ist die Erstellung einer Smartphone-App für Fahrschüler:innen, welche über GPS - Tracking automatisch Einträge in einem Fahrtenbuch aufzeichnet. Diese Einträge sollen in Form eines offiziellen Protokolls an die Fahrschule ausgehändigt werden können. Um Schüler:innen besser auf die praktische Fahrprüfung vorzubereiten, soll ebenso ein digitaler Fahrlehrer implementiert werden, dem/der Schüler:in Feedback in Form von statistischen Auswertungen gibt. Bis zum 28.6.2024 sollen alle oben genannten Features implementiert, getestet und veröffentlicht werden. Um sich ein Bild vom Markterfolg machen zu können, werden hierbei die App-Store Bewertungen und Downloadzahlen verwendet. Das Ziel ist, bis September die 3\%-Schwelle zu erreichen, das bedeutet etwa 100 Neukunden unter allen Österreicher:innen, die die L-Tafel beantragen (einschließlich L-17).
+
+
+
+\subsubsection*{IST-Zustand}
+Bis dato gibt es keine App, die das Aufzeichnen des Fahrtenbuchs für den Führerschein mit L-Tafel unabhängig von Fahrschulen und Mitgliedschaften (ÖAMTC) ermöglicht. Des Weiteren gibt es kein weitverbreitetes Tool das dem/der Fahrschüler:in personalisiertes Feedback seines/r bisherigen 
+
+
+
+\subsubsection*{SOLL-Zustand}
+Eine Smartphone-App für Fahrschüler:innen, welche über GPS - Tracking automatisch Einträge in einem Fahrtenbuch erstellt. Diese Einträge werden in Form eines offiziellen Protokolls exportiert. Das Analysieren der Fahrdaten und Erzeugen von Statistiken geben dem/der Fahrschüler:in ein Feedback. Zur Datensicherung steht eine Datenbank zur Verfügung.
+
 \subsection{Projektumfeld}
-\begin{itemize}
-	\item Identifikation der Stakeholder
-	\item Charakterisierung der Stakeholder
-	\item Maßnahmen
-	\item Grafische Darstellung des Umfeldes
-\end{itemize}
+
+\subsubsection*{Identifikation der Stakeholder}
+Zu Beginn haben wir mittels „Brainstorming“ die wichtigsten Stakeholder identifiziert. Uns wurde ersichtlich, dass nur User also Fahrschüler:innen und Begleitpersonen unsere Zielgruppen sind und mit dem Produkt zufrieden sein müssen. Im Laufe der Recherche wurde eine von ÖAMTC bereitgestellte\hfill\break Konkurrenz-App identifiziert, wodurch uns sofort klar war, dass wir gleich von Beginn an ein starkes Auftreten brauchen. Das bedeutet, dass wir speziell durch bessere Software und Features, sowie durch ein besseres Preismodell attraktiver für den Kunden sein wollen. Die Stakeholder werden mithilfe der folgenden Tabellen und Abbildungen (\cref{tab:Charakterisierung}, \cref{tab:Maßnahmen}, \cref{fig:Stakeholder}) dargestellt.
+
+
+
+\subsubsection*{Charakterisierung der Stakeholder}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|c|p{4.4cm}|}
+		\hline
+		\textbf{Stakeholder} & \textbf{Einfluss} & \textbf{Nähe} & \textbf{Einstellung} & \textbf{Beschreibung} \\
+		\hline
+		Auftraggeber & groß & nahe & positiv & Geschäftsführer \\
+		\hline
+		Fahrschulen & groß & mittel & neutral & Die Fahrschulen, welche die Fahrschüler:innen ausbilden. \\
+		\hline
+		Begleitperson & groß & nahe & positiv & z.B Eltern der Fahrschüler:innen \\
+		\hline
+		Fahrschüler:innen & groß & nahe & positiv & Die Fahrschüler:innen selbst \\
+		\hline
+		Medien & gering & mittel & neutral & Alle Medien die Über diese App berichten. \\
+		\hline
+		Konkurrenz-Apps & groß & nahe & negativ & Konkurrenz-Apps z. Bsp.: ÖAMTC \\
+		\hline
+	\end{tabular}
+	\caption{Charakterisierung der Stakeholder}
+	\label{tab:Charakterisierung}
+
+\end{table}
+
+
+
+\subsubsection*{Maßnahmen}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|p{10.6cm}|}
+		\hline
+		\textbf{Stakeholder} & \textbf{Maßnahmen} \\
+		\hline
+		Auftraggeber & Wöchentliche Meetings. Berichte und Fortschritte liefern. \\
+		\hline
+		Fahrschulen & Überzeugen, dass das Protokoll weniger leicht verfälscht werden kann und die App die Fahrschüler:innen unterstützt. \\
+		\hline
+		Begleitperson & Protokollierung mittels App soll eine Erleichterung sein und Schutz vor Datenverlust bieten. \\
+		\hline
+		Fahrschüler:innen & Positive Werbung, benutzerfreundliches und praktisches Design der App, sowie werbungsfrei. \\
+		\hline
+		Medien & Durch Erfolg und hohe Userzahlen, sowie gutes Marketing / auf App aufmerksam machen. \\
+		\hline
+		Konkurrenz-Apps & Faires Konkurrenzverhalten \\
+		\hline
+	\end{tabular}
+	\caption{Maßnahmenkatalog}
+	\label{tab:Maßnahmen}
+\end{table}
+
+
+
+\subsubsection*{Grafische Darstellung des Umfeldes}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=15cm]{figures/graf_stakeholder.png}
+	\caption{Grafik Stakeholder}
+	\label{fig:Stakeholder}
+\end{figure}
+
+
 \subsection{Risikoanalyse}
+
 \begin{itemize}
 	\item Risikomatrix
 \end{itemize}
 
+
+
 \section{Problemanalyse}
+
+
+
 \subsection{USE-Case-Analyse}
 \begin{itemize}
 	\item UseCases auf Basis von Benutzerzielen identifizieren:
@@ -55,6 +161,9 @@ Projektziele-Hierarchie - SMART
 \end{itemize}
 
 \subsection{Domain-Class-Modelling}
+
+
+
 \begin{itemize}
 	\item "Dinge" (Rollen, Einheiten, Geräte, Events etc.) identifizieren, um die es im Projekt geht
 	\item ER-Modellierung oder Klassendiagramme
@@ -284,7 +393,4 @@ falls im Projekt gefordert
 BW-Teil
 
 \chapter{Zusammenfassung}
-\begin{itemize}
-	\item Etwas längere Form des Abstracts
-	\item Detaillierte Beschreibung des Outputs der Arbeit
-\end{itemize}
+Mit der Projektumfeldanalyse wurden alle Stakeholder erfasst, die bei einer praktisch ausgelegten App für L17 Fahrschüler:innen als relevant erschienen. Die Positionen der einzelnen Interessensgruppen wurden analysiert und grafisch dargestellt. Weiters wurde ein Maßnahmenkatalog erstellt, um mögliche Methoden zu identifizieren, die das Projektumfeld verbessern sollen. Da dieses Projekt mit der Diplomarbeit am IT-Kolleg zusammenhängt ist der Termin mit Ende Juni für ein Minimum Viable Produkt festgelegt. Dieser Termin ist aber sehr realistisch. Die Anforderungen an diese App sind für eine Smartphone App umfangreich und erfordern eine genaue Auswertung und Prüfung in der Testphase. Dieses Produkt bietet dem/der Fahrschüler:in eine Erleichterung bei der Protokollierung und laufend Feedback über den praktischen Fortschritt dem/der Schüler:in.
