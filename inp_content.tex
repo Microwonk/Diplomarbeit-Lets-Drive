@@ -122,8 +122,6 @@ Zu Beginn haben wir mittels „Brainstorming“ die wichtigsten Stakeholder iden
 
 \end{table}
 
-
-
 \subsubsection*{Maßnahmen}
 \begin{table}[H]
 	\centering
@@ -150,6 +148,8 @@ Zu Beginn haben wir mittels „Brainstorming“ die wichtigsten Stakeholder iden
 
 
 
+
+
 \subsubsection*{Grafische Darstellung des Umfeldes}
 \begin{figure}[H]
 	\centering
@@ -168,46 +168,60 @@ Zu Beginn haben wir mittels „Brainstorming“ die wichtigsten Stakeholder iden
 
 
 \section{Problemanalyse}
+Dieser spezielle Bereich ist von besonderer Relevanz, da er unmittelbaren Einfluss auf das Gesamtergebniss der App hat. Eine gründliche Untersuchung dieses Themas wird dazu beitragen, die Wünsche der Benutzer zu definieren und darauf die App zu designen und aufzubauen.
 
-
+Im Folgenden werden wir die USE-Cases, das Domain-Class-Modelling und User-Interface im Detail darstellen. Dies ermöglicht es uns, die Grundlagen für unsere weitere Arbeit zu legen.
 
 \subsection{USE-Case-Analyse}
+
+USE-Cases, auch Anwendungsfälle genannt, sind eine wichtige Komponente in einer Diplomarbeit. Sie beschreiben, wie ein bestimmtes System oder eine Software in der Praxis eingesetzt wird. Dabei unterscheidet man zwischen Benutzer-basierten und Ereignis-basierten USE-Cases:
 \begin{itemize}
-	\item UseCases auf Basis von Benutzerzielen identifizieren:
-	      \begin{itemize}
-		      \item Benutzer eines Systems identifizieren
-		      \item Benutzerziele identifizieren (Interviews)
-		      \item Use-Case-Liste pro Benutzer definieren
-		  
-		     \item 132	Ich als Begleitperson möchte die gefahrenen Routen automatisch aufgezeichnet bekommen.
-		     \item 170	Accessibility pruefen: Farben mit https://www.aremycolorsaccessible.com/ nachschlagen. Vorallem Erstanmeldungsscreen
-		     \item 168	Ich als Begleitperson möchte eine Fahrt auch manuell hinzufügen können
-		     \item 166	Ich als Nutzer der App möchte eine Liste der unternommenen Fahrten haben
-		     \item 135	Ich als Begleitperson möchte die gefahrenen Routen als PDF-Dokument drucken können.
-		     \item 131	Ich als Fahrschüler möchte durch den digitalen Fahrlehrer auf die praktische Fahrprüfung vorbereitet werden.
-		     \item 154	Als Fahrlehrer möchte ich die Fahrdaten auswerten können
-		     \item 149	Als Benutzer dieser App möchte ich meine Daten sichern können
-		     \item 134	Ich als Fahrlehrer möchte Einsicht auf die gefahrenen Strecken und den Fortschritt meiner Fahrschüler haben.
-		     \item 133	Ich als Fahrschule möchte die Validität der gefahrenen Strecken der Fahrschüler sicherstellen können.
-	      \end{itemize}
-	\item UseCases auf Basis von Ereignissen identifizieren:
-	      \begin{itemize}
-		      \item Externes Event triggert einen Prozess
-		      \item zeitliches Event triggert einen Prozess (Zeitpunkt wird erreicht)
-		      \item State-Event (Zustandsänderung im System triggert einen Prozess)
-	      \end{itemize}
-	\item Werkzeuge:
-	      \begin{itemize}
-		      \item USE-Case-Beschreibungen (textuell, tabellarisch)
-		      \item USE-Case-Diagramm
-		      \item Aktivitätsdiagramm für den Use-Case (Interaktion zwischen Akteur und System abbilden)
-		      \item System-Sequenzdiagramm (Spezialfall eines Sequenzdiagramms: Nur 1 Akteur und 1 Objekt, das Objekt ist das komplette System, es geht um die Input/Output Requirements, die abzubilden sind)
-	      \end{itemize}
+	\item Ich als Begleitperson möchte die gefahrenen Routen automatisch aufgezeichnet bekommen.
+	\item Ich als Begleitperson möchte eine Fahrt auch manuell hinzufügen können
+	\item Ich als Nutzer der App möchte eine Liste der unternommenen Fahrten haben
+	\item Ich als Begleitperson möchte die gefahrenen Routen als PDF-Dokument drucken können.
+	\item Ich als Fahrschüler:in möchte durch den digitalen Fahrlehrer auf die praktische Fahrprüfung vorbereitet werden.
+	\item Als Fahrlehrer:in möchte ich die Fahrdaten auswerten können
+	\item Als Benutzer dieser App möchte ich meine Daten sichern können
+	\item Ich als Fahrlehrer:in möchte Einsicht auf die gefahrenen Strecken und den Fortschritt meiner Fahrschüler:in haben.
+	\item Ich als Fahrschule möchte die Validität der gefahrenen Strecken der Fahrschüler:innen sicherstellen können.
+	\item Ich als Fahrschüler:in möchte, wenn es einen Netz-ausfall oder einen GPS-ausfall gibt, trotzdem meine Daten absichern und eine Fahrt weiterführen können.
 \end{itemize}
 
+\newpage
+USE-Cases dieses Projektes können mithilfe von Tabellen (\ref{tab:USE-Case1}), USE-Case Diagrammen (\ref{fig:USE-Case-Diagramm}) und mittles Aktivitätsdiagrammen (\ref{}) dargestellt werden. \\
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=15cm]{figures/usecase_diagramm.png}
+	\caption{USE-Case Diagramm}
+	\label{fig:USE-Case-Diagramm}
+\end{figure}
+
+\begin{table}[H]
+	\centering
+	\begin{tabularx}{\textwidth}{|l|X|}
+		\hline
+		Use-Case Nummer &  \\
+		\hline
+		Referenzen &  \\
+		\hline
+		kurze Beschreibung & Das Fahrtenbuch wird anhand der Rohdaten jedes mal neu erstellt. Wenn man die Statistik bzw. die Details wissen will, werden die Rohdaten mit Graphen und auf der Map dargestellt. \\
+		\hline
+		Akteure &  \\
+		\hline
+		Auslöser & Der Button Fahrtenbuch wird gedrückt. \\
+		\hline
+		Vorbedingungen &  \\
+		\hline
+		Standardablau &  \\
+		\hline
+	\end{tabularx}
+	\caption{Fahrtenbuch öffnen}
+	\label{tab:USE-Case1}
+\end{table}
+
 \subsection{Domain-Class-Modelling}
-
-
 
 \begin{itemize}
 	\item "Dinge" (Rollen, Einheiten, Geräte, Events etc.) identifizieren, um die es im Projekt geht
@@ -215,11 +229,30 @@ Zu Beginn haben wir mittels „Brainstorming“ die wichtigsten Stakeholder iden
 	\item Zustandsdiagramme (zur Darstellung des Lebenszyklus von Domain-Klassen darstellen)
 \end{itemize}
 
+\newpage
 \subsection{User-Interface-Design}
-\begin{itemize}
-	\item Mockups
-	\item Wireframes
-\end{itemize}
+Wir verwendeten Figma für die Mockups und generellen Designs, Frühzeitige Designs sind in Abbildungen \ref{fig:mockup2}, \ref{fig:mockup1} und \ref{fig:mockup3} zu sehen. Sie zeigen die Erstanmeldung, und die Fahrt-hinzufügen Maske in einem Dark und Light Theme.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=15cm]{figures/mockup2.png}
+	\caption{Fahrt hinzufügen im Dark Theme}
+	\label{fig:mockup2}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=15cm]{figures/mockup1.png}
+	\caption{Anfgangpages Mockup}
+	\label{fig:mockup1}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=15cm]{figures/mockup3.png}
+	\caption{Fahrt hinzufügen im Light Theme}
+	\label{fig:mockup3}
+\end{figure}
 
 \section{Pflichtenheft}
 
