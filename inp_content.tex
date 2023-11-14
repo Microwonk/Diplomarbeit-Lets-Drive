@@ -206,15 +206,38 @@ USE-Cases dieses Projektes können mithilfe von Tabellen (\ref{tab:USE-Case1}), 
 		\hline
 		Referenzen &  \\
 		\hline
-		kurze Beschreibung & Das Fahrtenbuch wird anhand der Rohdaten jedes mal neu erstellt. Wenn man die Statistik bzw. die Details wissen will, werden die Rohdaten mit Graphen und auf der Map dargestellt. \\
+		kurze Beschreibung & Das Fahrtenbuch wird anhand der Rohdaten jedes mal neu erstellt. Diese werden asynchron stückweise über eine Methode geladen um die App zu entlasten. Eine Filterfunktion kann zum Suchen verwendet werden.   \\
 		\hline
-		Akteure &  \\
+		Akteure &  Fahrlehrer, Begleitperson, Fahrschüler\\
 		\hline
 		Auslöser & Der Button Fahrtenbuch wird gedrückt. \\
 		\hline
-		Vorbedingungen &  \\
+		Vorbedingungen & Mindestens eine Fahrt ist gespeichert. Ansonsten gibt es keine Bedingungen die erfüllt sein müssen um das Fahrtenbuch benutzen zu können. \\
 		\hline
-		Standardablau &  \\
+		Standardablauf & App starten, Fahrtenbuch öffnen \\
+		\hline
+	\end{tabularx}
+	\caption{Fahrtenbuch öffnen}
+	\label{tab:USE-Case1}
+\end{table}
+
+\begin{table}[H]
+	\centering
+	\begin{tabularx}{\textwidth}{|l|X|}
+		\hline
+		Use-Case Nummer &  \\
+		\hline
+		Referenzen &  \\
+		\hline
+		kurze Beschreibung & Eine Fahrt wird automatisch durch GPS-Tracking aufgezeichnet. Im Tunnel bei Signalverlust wird eine Gerade berechnet. Getrackte Fahrten werden für die Analyse verwendet. Es wird nach einer vordefinierten Zeit ein Wegpunkt gespeichert der Längengrad, Breitengrad, Höhe enthält. Damit lässt sich später zum Beispiel eine Heatmap erzeugen. Manuell hinterlegte können dafür nicht verwendet werden.    \\
+		\hline
+		Akteure &  Fahrlehrer, Begleitperson, Fahrschüler\\
+		\hline
+		Auslöser & Der Button 'neue Fahrt starten' wird gedrückt. \\
+		\hline
+		Vorbedingungen & Eine Begleitperson muss mitfahren wird aber softwareseitig nicht kontrolliert. GPS ist eingeschaltet und verfügbar. Tracking wurde akzeptiert. \\
+		\hline
+		Standardablauf & Im Menü den Button 'neue Fahrt starten' drücken. Anschließend im Formular die Begleitperson, das Kennzeichen und die Wetterverhältnisse auswählen. Beim ersten Start die Meldung Tracking akzeptieren. Danach wird die Fahrt automatisch aufgezeichnet.  \\
 		\hline
 	\end{tabularx}
 	\caption{Fahrtenbuch öffnen}
