@@ -76,7 +76,7 @@ Tel.: \href{tel:069910624227}{0699 10624227}
 In den Vorerhebungen werden der IST - Zustand und der SOLL - Zustand genau erklärt. Eine Zielformulierung beschreibt das erwartete Ergebnis eindeutig, attraktiv, realistisch und messbar mit konkreten Terminen. Einfluss, Nähe und Einstellung der Stakeholder und Maßnahmen für diese werden graphisch und tabellarisch dargestellt.
 
 \subsection{IST-Zustand}
-Bis dato gibt es keine App, die das Aufzeichnen des Fahrtenbuchs für den Führerschein mit L-Tafel unabhängig von Fahrschulen und Mitgliedschaften (ÖAMTC) ermöglicht. Des Weiteren gibt es kein weitverbreitetes Tool das dem/der Fahrschüler:in personalisiertes Feedback seines/r bisherigen 
+Bis dato gibt es keine App, die das Aufzeichnen des Fahrtenbuchs für den Führerschein mit L-Tafel unabhängig von Fahrschulen und Mitgliedschaften (ÖAMTC) ermöglicht. Des Weiteren gibt es kein weitverbreitetes Tool das dem/der Fahrschüler:in personalisiertes Feedback seines/r bisherigen Fahrten bekommt.
 
 \subsection{SOLL-Zustand}
 Eine Smartphone-App für Fahrschüler:innen, welche über GPS - Tracking automatisch Einträge in einem Fahrtenbuch erstellt. Diese Einträge werden in Form eines offiziellen Protokolls exportiert. Das Analysieren der Fahrdaten und Erzeugen von Statistiken geben dem/der Fahrschüler:in ein Feedback. Zur Datensicherung steht eine Datenbank zur Verfügung.
@@ -141,9 +141,6 @@ Zu Beginn haben wir mittels „Brainstorming“ die wichtigsten Stakeholder iden
 \end{table}
 
 
-
-
-
 \subsubsection*{Grafische Darstellung des Umfeldes}
 \begin{figure}[H]
 	\centering
@@ -159,22 +156,33 @@ Zu Beginn haben wir mittels „Brainstorming“ die wichtigsten Stakeholder iden
 	\item Risikomatrix
 \end{itemize}
 
+\newpage
 \section{Pflichtenheft}
 
+Das Pflichtenheft ist ein wichtiger Bestandteil der Erörterung der Anforderungen des Projektes, wie diese Aufgaben aufgeteilt werden und was für ein Endprodukt dabei entstehen soll.
+
 \subsection{Zielbestimmung}
-\begin{itemize}
-	\item Projektbeschreibung
-	\item IST-Zustand
-	\item SOLL-Zustand
-	\item NICHT-Ziele (Abgrenzungskriterien)
-\end{itemize}
+TODO projektbeschreibung anfang
+
+\subsection{IST-Zustand}
+Bis dato gibt es keine App, die das Aufzeichnen des Fahrtenbuchs für den Führerschein mit L-Tafel unabhängig von Fahrschulen und Mitgliedschaften (ÖAMTC) ermöglicht. Des Weiteren gibt es kein weitverbreitetes Tool das dem/der Fahrschüler:in personalisiertes Feedback seines/r bisherigen Fahrten bekommt.
+
+\subsection{SOLL-Zustand}
+Eine Smartphone-App für Fahrschüler:innen, welche über GPS - Tracking automa-
+tisch Einträge in einem Fahrtenbuch erstellt. Diese Einträge werden in Form eines
+offiziellen Protokolls exportiert. Das Analysieren der Fahrdaten und Erzeugen von
+Statistiken geben dem/der Fahrschüler:in ein Feedback. Zur Datensicherung steht
+eine Datenbank zur Verfügung.
+
+\subsection{NICHT-Ziele}
+TODO
+
 \subsection{Produkteinsatz und Umgebung}
-\begin{itemize}
-	\item Anwendungsgebiet
-	\item Zielgruppen
-	\item Betriebsbedingungen
-	\item Hard-/Softwareumgebung
-\end{itemize}
+
+	Das Produkt wird eine Cross-Platform App, welche auf den Betriebssystemen Android und iOS erhältlich sein wird. Let's Drive findet Anwendung bei Fahrschülern/Fahrschülerinnen, welche die L-Tafel oder den L-17 Fahrschein absolvieren wollen. Dienste der App beinhalten z.B. Tracking, Statistik der Fahrten, einfacher Export der Tracking Daten in das Formular für den Fahrschein mit 3000 bzw. 1000 Kilometer. Ein GPS wird für das Tracking benötigt. Eine Internetverbindung ist während einer Fahrt nicht erfordelich. 
+	Zielplattformen sind iOS und Android da diese die üblichen Betriebssysteme sind. 
+	Eine Erweiterung ist mit der gewählten Technologie möglich.
+
 \subsection{Funktionalitäten}
 
 	Es gibt grundsätzlich 2 Arten von Anforderungen. Die welche in der App sein müssen und die welche in der App als zusätzlich sein können. Die Muss Anforderungen müssen natürlich vollständig umgesetzt werden. Weiters gibt es die FURPS - Anforderungen. Das sind funktionale Anforderungen und die nicht für die Funktion der App notwendigen Anforderungen wie Benutzerfreundlichkeit, Zuverlässigkeit, Leistung und Support.
@@ -200,6 +208,7 @@ Zu Beginn haben wir mittels „Brainstorming“ die wichtigsten Stakeholder iden
 	\emph{Funktional}
 		\begin{itemize}
 			\item Prüfungsfahrten simulieren mit Audioausgabe der Strecke
+			\item Erweiterbarkeit des Einsatzbereiches mittels generalisierung der App (Führung eines generellen Fahrtenbuches)
 		\end{itemize}
 
 	\emph{nicht Funktional}
@@ -209,27 +218,41 @@ Zu Beginn haben wir mittels „Brainstorming“ die wichtigsten Stakeholder iden
 	\end{itemize}
 
 \subsection{Testszenarien und Testfälle}
+
+Unit Tests sind der erste Schritt, danach werden Integrationstests durchgeführt. Nach proof of concept und Abdeckung der meisten Testfälle werden eigenständige Alpha-Tests innerhalb des Entwicklungs-Teams durchgeführt. Dies beinhaltet einen Dev-Account, das Aufzeichnen von Fahrten und der Upload auf die Datenbank. Danach sollen Beta-Tester (Bekannte und Freiwillige) die App testen, indem wir sie für Beta-Tester auf den App-Stores zu Verfügung stellen.
+
+\emph{Testfälle}
 \begin{itemize}
-	\item Beschreibung der Testmethodik
-	\item Testfall 1
-	\item Testfall 2
-	\item \ldots
+	\item Fahrt starten und aufnehmen
+	\item Fahrt auf die Datenbank hochladen / auf den lokalen Speicher legen
+	\item Fahrt abbrechen / während der Fahrt abbrechen
+	\item Fahrt durch den Tunnel / während man kein GPS-Signal hat
+	\item An- und Abmeldung bei mehreren App-Instanzen beim gleichen Account
+	\item Manuelles Löschen und Anlegen von Fahrtenbuch Einträgen
 \end{itemize}
 \subsection{Liefervereinbarung}
-\begin{itemize}
-	\item Lieferumfang
-	\item Modus
-	\item Verteilung(Deployment)
-\end{itemize}
+Bereitstellung der App im Apple App-Store, im Google Play Store (und eventuell in der Huawei App-Gallery), damit die App an alle österreichischen Fahrschüler:innen bereitgestellt werden kann.
 
+\newpage
 \section{Problemanalyse}
-In diesen Abschnitt werden mittels UML Diagrammen und Beschreibungen die Funktionalitäten beschrieben. Auch das Userinterface wird dargestellt. Eine gründliche Untersuchung dieser Funktionellen und nicht Funktionellen Anforderungen wird dazu beitragen die Wünsche der Benutzer zu definieren um die App nutzerfreundlich und nach Wunsch des Kunden zu designen. Das soll der Grundbaustein für unsere weitere App Entwicklung sein.
+In diesem Abschnitt werden mittels UML Diagrammen und Beschreibungen die Funktionalitäten beschrieben. Auch das Userinterface wird dargestellt. Eine gründliche Untersuchung dieser Funktionellen und nicht Funktionellen Anforderungen wird dazu beitragen die Wünsche der Benutzer zu definieren um die App nutzerfreundlich und nach Wunsch des Kunden zu designen. Das soll der Grundbaustein für unsere weitere App Entwicklung sein.
 
 \subsection{USE-Case-Analyse}
 
 USE-Cases, auch Anwendungsfälle genannt, sind eine wichtige Komponente in einer Diplomarbeit. Sie beschreiben, wie ein bestimmtes System oder eine Software in der Praxis eingesetzt wird. Dabei unterscheidet man zwischen benutzerbasierten und ereignisbasierten USE-Cases.
 
 \subsection{Userstories}
+
+Das folgende UML USE-Case-Diagramm (\ref{fig:USE-Case-Diagramm}) zeigt die Userstories graphisch dar und wie sie in der Anwendung zusammenhängen. 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=15cm]{figures/usecase_diagramm.png}
+	\caption{USE-Case Diagramm}
+	\label{fig:USE-Case-Diagramm}
+\end{figure}
+
+
 \begin{itemize}
 	\item Ich als Begleitperson möchte die gefahrenen Routen automatisch aufgezeichnet bekommen.
 	\item Ich als Begleitperson möchte eine Fahrt auch manuell hinzufügen können
@@ -243,33 +266,20 @@ USE-Cases, auch Anwendungsfälle genannt, sind eine wichtige Komponente in einer
 	\item Ich als Fahrschüler:in möchte, wenn es einen Netz-ausfall oder einen GPS-ausfall gibt, trotzdem meine Daten absichern und eine Fahrt weiterführen können.
 \end{itemize}
 
-\newpage
-Das folgende UML USE-Case-Diagramm (\ref{fig:USE-Case-Diagramm}) zeigt die Userstories nochmal graphisch wie sie in der Anwendung zusammenhängen. 
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=15cm]{figures/usecase_diagramm.png}
-	\caption{USE-Case Diagramm}
-	\label{fig:USE-Case-Diagramm}
-\end{figure}
-
-\newpage
-Die nachfolgenden schriftlichen Detailbeschreibungen in Tabelle (\ref{tab:USE-Case1}) zeigen den genauen Ablauf eines Use-Cases. Auf die Auslöser und wer aller beteiligt ist wird beschrieben.
+Die nachfolgenden schriftlichen Detailbeschreibungen in Tabellen \ref{tab:USE-Case1}, \ref{tab:USE-Case2} zeigen den genauen Ablauf einiger Use-Cases.
 \begin{table}[H]
 	\centering
 	\begin{tabularx}{\textwidth}{|l|X|}
 		\hline
-		Use-Case Nummer &  \\
+		Use-Case Nummer & 141 \\
 		\hline
-		Referenzen &  \\
-		\hline
-		kurze Beschreibung & Das Fahrtenbuch wird anhand der Rohdaten jedes mal neu erstellt. Diese werden asynchron stückweise über eine Methode geladen um die App zu entlasten. Eine Filterfunktion kann zum Suchen verwendet werden.   \\
+		kurze Beschreibung & Das Fahrtenbuch wird anhand der Rohdaten jedes mal neu erstellt. Diese werden asynchron stückweise über eine Methode geladen um die App zu entlasten.   \\
 		\hline
 		Akteure &  Fahrlehrer, Begleitperson, Fahrschüler\\
 		\hline
-		Auslöser & Der Button Fahrtenbuch wird gedrückt. \\
+		Auslöser & Der Button 'gehe zu Fahrtenbuch' wird gedrückt. \\
 		\hline
-		Vorbedingungen & Mindestens eine Fahrt ist gespeichert. Ansonsten gibt es keine Bedingungen die erfüllt sein müssen um das Fahrtenbuch benutzen zu können. \\
+		Vorbedingungen & Mindestens eine Fahrt ist gespeichert. Ansonsten gibt es keine Bedingungen die erfüllt sein müssen, um das Fahrtenbuch benutzen / anzeigen zu können zu können. \\
 		\hline
 		Standardablauf & App starten, Fahrtenbuch öffnen \\
 		\hline
@@ -282,9 +292,7 @@ Die nachfolgenden schriftlichen Detailbeschreibungen in Tabelle (\ref{tab:USE-Ca
 	\centering
 	\begin{tabularx}{\textwidth}{|l|X|}
 		\hline
-		Use-Case Nummer &  \\
-		\hline
-		Referenzen &  \\
+		Use-Case Nummer & 138 \\
 		\hline
 		kurze Beschreibung & Eine Fahrt wird automatisch durch GPS-Tracking aufgezeichnet. Im Tunnel bei Signalverlust wird eine Gerade berechnet. Getrackte Fahrten werden für die Analyse verwendet. Es wird nach einer vordefinierten Zeit ein Wegpunkt gespeichert der Längengrad, Breitengrad, Höhe enthält. Damit lässt sich später zum Beispiel eine Heatmap erzeugen. Manuell hinterlegte können dafür nicht verwendet werden.    \\
 		\hline
@@ -294,14 +302,30 @@ Die nachfolgenden schriftlichen Detailbeschreibungen in Tabelle (\ref{tab:USE-Ca
 		\hline
 		Vorbedingungen & Eine Begleitperson muss mitfahren wird aber softwareseitig nicht kontrolliert. GPS ist eingeschaltet und verfügbar. Tracking wurde akzeptiert. \\
 		\hline
-		Standardablauf & Im Menü den Button 'neue Fahrt starten' drücken. Anschließend im Formular die Begleitperson, das Kennzeichen und die Wetterverhältnisse auswählen. Beim ersten Start die Meldung Tracking akzeptieren. Danach wird die Fahrt automatisch aufgezeichnet.  \\
+		Standardablauf & Im Menü den Button 'neue Fahrt starten' drücken. Anschließend im Formular die Begleitperson, das Kennzeichen und die Wetterverhältnisse auswählen. Beim ersten Start die Meldung Tracking akzeptieren. Danach wird die Fahrt automatisch aufgezeichnet. Zuletzt muss sie beendet werden, um das Aufzeichnen zu stoppen. \\
 		\hline
 	\end{tabularx}
 	\caption{Fahrtenbuch öffnen}
-	\label{tab:USE-Case1}
+	\label{tab:USE-Case2}
 \end{table}
 
 \subsection{Domain-Class-Modelling}
+Um einen Case im Deail zu beschreiben wurden Ablaufdiagramme verwendet.   
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm]{figures/Ablaufdiagramm1.png}
+	\caption{Ablaufdiagramm Fahrtenbuch}
+	\label{fig:ablaufdiagramm1}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=11cm]{figures/Ablaufdiagramm2.png}
+	\caption{Ablaufdiagramm GPS}
+	\label{fig:ablaufdiagramm2}
+\end{figure}
 
 \begin{itemize}
 	\item "Dinge" (Rollen, Einheiten, Geräte, Events etc.) identifizieren, um die es im Projekt geht
@@ -323,7 +347,7 @@ Wir verwendeten Figma für die Mockups und generellen Designs, Frühzeitige Desi
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=15cm]{figures/mockup1.png}
-	\caption{Anfgangpages Mockup}
+	\caption{Anfangpages Mockup}
 	\label{fig:mockup1}
 \end{figure}
 
