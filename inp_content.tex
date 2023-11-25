@@ -162,20 +162,20 @@ Zu Beginn haben wir mittels „Brainstorming“ die wichtigsten Stakeholder iden
 Das Pflichtenheft ist ein wichtiger Bestandteil der Erörterung der Anforderungen des Projektes, wie diese Aufgaben aufgeteilt werden und was für ein Endprodukt dabei entstehen soll.
 
 \subsection{Zielbestimmung}
-TODO projektbeschreibung anfang
+Es muss immer ein Produkt konstruiert werden welches die Anforderungen des Kunden und nicht die der Firma erfüllt. In unserem Fall sind die eigentlichen Kunden die User. Dazu dient das Lasten und das Pflichtenheft. In diesen Pflichtenheft werden alle Muss Anforderungen beschrieben, die an diese Software gestellt werde. Weiters werden die Kann Anforderungen beschrieben, die auch vom Kunden kommen. In den Nicht Zielen wird nochmals auf ein paar wichtige Punkte eingegangen für die diese App nicht gedacht ist.
 
-\subsection{IST-Zustand}
+\subsubsection{IST-Zustand}
 Bis dato gibt es keine App, die das Aufzeichnen des Fahrtenbuchs für den Führerschein mit L-Tafel unabhängig von Fahrschulen und Mitgliedschaften (ÖAMTC) ermöglicht. Des Weiteren gibt es kein weitverbreitetes Tool das dem/der Fahrschüler:in personalisiertes Feedback seines/r bisherigen Fahrten bekommt.
 
-\subsection{SOLL-Zustand}
+\subsubsection{SOLL-Zustand}
 Eine Smartphone-App für Fahrschüler:innen, welche über GPS - Tracking automa-
 tisch Einträge in einem Fahrtenbuch erstellt. Diese Einträge werden in Form eines
 offiziellen Protokolls exportiert. Das Analysieren der Fahrdaten und Erzeugen von
 Statistiken geben dem/der Fahrschüler:in ein Feedback. Zur Datensicherung steht
-eine Datenbank zur Verfügung.
+eine Datenbank zur Verfügung. Auch ein manuellen Hinzufügen einer Fahrt soll möglich sein.
 
-\subsection{NICHT-Ziele}
-TODO
+\subsubsection{NICHT-Ziele}
+Ziel der Projektarbeit ist es nicht eine Release-Software fertigzustellen. Ein Prototyp der funktioniert ist ausreichend. Die gesammelten Daten werden nur für persönliche Feedbacks verwendet. Es werden keine Daten weitergegeben.
 
 \subsection{Produkteinsatz und Umgebung}
 
@@ -243,7 +243,7 @@ USE-Cases, auch Anwendungsfälle genannt, sind eine wichtige Komponente in einer
 
 \subsection{Userstories}
 
-Das folgende UML USE-Case-Diagramm (\ref{fig:USE-Case-Diagramm}) zeigt die Userstories graphisch dar und wie sie in der Anwendung zusammenhängen. 
+Das folgende UML USE-Case-Diagramm (\ref{fig:USE-Case-Diagramm}) zeigt graphisch die Userstories und wie sie in der Anwendung zusammenhängen.
 
 \begin{figure}[H]
 	\centering
@@ -255,7 +255,7 @@ Das folgende UML USE-Case-Diagramm (\ref{fig:USE-Case-Diagramm}) zeigt die Users
 
 \begin{itemize}
 	\item Ich als Begleitperson möchte die gefahrenen Routen automatisch aufgezeichnet bekommen.
-	\item Ich als Begleitperson möchte eine Fahrt auch manuell hinzufügen können
+	\item Ich als Begleitperson möchte eine Fahrt manuell hinzufügen können
 	\item Ich als Nutzer der App möchte eine Liste der unternommenen Fahrten haben
 	\item Ich als Begleitperson möchte die gefahrenen Routen als PDF-Dokument drucken können.
 	\item Ich als Fahrschüler:in möchte durch den digitalen Fahrlehrer auf die praktische Fahrprüfung vorbereitet werden.
@@ -263,7 +263,7 @@ Das folgende UML USE-Case-Diagramm (\ref{fig:USE-Case-Diagramm}) zeigt die Users
 	\item Als Benutzer dieser App möchte ich meine Daten sichern können
 	\item Ich als Fahrlehrer:in möchte Einsicht auf die gefahrenen Strecken und den Fortschritt meiner Fahrschüler:in haben.
 	\item Ich als Fahrschule möchte die Validität der gefahrenen Strecken der Fahrschüler:innen sicherstellen können.
-	\item Ich als Fahrschüler:in möchte, wenn es einen Netz-ausfall oder einen GPS-ausfall gibt, trotzdem meine Daten absichern und eine Fahrt weiterführen können.
+	\item Ich als Fahrschüler:in möchte, wenn es einen Netzausfall oder einen GPS-Ausfall gibt, trotzdem meine Daten absichern und eine Fahrt weiterführen können.
 \end{itemize}
 
 Die nachfolgenden schriftlichen Detailbeschreibungen in Tabellen \ref{tab:USE-Case1}, \ref{tab:USE-Case2} zeigen den genauen Ablauf einiger Use-Cases.
@@ -279,7 +279,7 @@ Die nachfolgenden schriftlichen Detailbeschreibungen in Tabellen \ref{tab:USE-Ca
 		\hline
 		Auslöser & Der Button 'gehe zu Fahrtenbuch' wird gedrückt. \\
 		\hline
-		Vorbedingungen & Mindestens eine Fahrt ist gespeichert. Ansonsten gibt es keine Bedingungen die erfüllt sein müssen, um das Fahrtenbuch benutzen / anzeigen zu können zu können. \\
+		Vorbedingungen & Mindestens eine Fahrt ist gespeichert. Ansonsten gibt es keine Bedingungen die erfüllt sein müssen, um das Fahrtenbuch benutzen / anzeigen zu können. \\
 		\hline
 		Standardablauf & App starten, Fahrtenbuch öffnen \\
 		\hline
@@ -294,23 +294,45 @@ Die nachfolgenden schriftlichen Detailbeschreibungen in Tabellen \ref{tab:USE-Ca
 		\hline
 		Use-Case Nummer & 138 \\
 		\hline
-		kurze Beschreibung & Eine Fahrt wird automatisch durch GPS-Tracking aufgezeichnet. Im Tunnel bei Signalverlust wird eine Gerade berechnet. Getrackte Fahrten werden für die Analyse verwendet. Es wird nach einer vordefinierten Zeit ein Wegpunkt gespeichert der Längengrad, Breitengrad, Höhe enthält. Damit lässt sich später zum Beispiel eine Heatmap erzeugen. Manuell hinterlegte können dafür nicht verwendet werden.    \\
+		kurze Beschreibung & Eine Fahrt wird automatisch durch GPS-Tracking aufgezeichnet. Im Tunnel bei Signalverlust wird eine Gerade berechnet. Getrackte Fahrten werden für die Analyse verwendet. Es wird nach einer vordefinierten Zeit ein Wegpunkt gespeichert der Längengrad, Breitengrad, Höhe enthält. Damit lässt sich später zum Beispiel eine Heatmap erzeugen. Manuell hinterlegte Fahrten können dafür nicht verwendet werden. Die Geschwindigkeit die das GPS zusätzlich im Response liefert wird für die Streckenberechnung verwendet. Mit dieser Methode ist die GPS Genauigkeit für die Rechnung relevant.    \\
 		\hline
 		Akteure &  Fahrlehrer, Begleitperson, Fahrschüler\\
 		\hline
 		Auslöser & Der Button 'neue Fahrt starten' wird gedrückt. \\
 		\hline
-		Vorbedingungen & Eine Begleitperson muss mitfahren wird aber softwareseitig nicht kontrolliert. GPS ist eingeschaltet und verfügbar. Tracking wurde akzeptiert. \\
+		Vorbedingungen & Eine Begleitperson muss mitfahren. Das wird softwareseitig nicht kontrolliert. GPS ist eingeschaltet und verfügbar. Tracking wurde akzeptiert. \\
 		\hline
-		Standardablauf & Im Menü den Button 'neue Fahrt starten' drücken. Anschließend im Formular die Begleitperson, das Kennzeichen und die Wetterverhältnisse auswählen. Beim ersten Start die Meldung Tracking akzeptieren. Danach wird die Fahrt automatisch aufgezeichnet. Zuletzt muss sie beendet werden, um das Aufzeichnen zu stoppen. \\
+		Standardablauf & Im Menü den Button 'neue Fahrt starten' drücken. Anschließend im Formular die Begleitperson, das Kennzeichen und die Wetterverhältnisse auswählen. Beim ersten Start die Meldung Tracking akzeptieren. Danach wird die Fahrt automatisch aufgezeichnet. Zuletzt muss sie beendet werden, um das Aufzeichnen zu stoppen und in die Main Page zurückzukehren. \\
 		\hline
 	\end{tabularx}
-	\caption{Fahrtenbuch öffnen}
+	\caption{automatischen Aufzeichnen einer Fahrt}
 	\label{tab:USE-Case2}
 \end{table}
 
+
+\begin{table}[H]
+	\centering
+	\begin{tabularx}{\textwidth}{|l|X|}
+		\hline
+		Use-Case Nummer & 175 \\
+		\hline
+		kurze Beschreibung & Eine Fahrt wird immer erst lokal gespeichert. Das geschieht mit den speichern Button. Dieser erscheint erst, wenn das ganze Formular Valid ist. Eingegeben werden das Datum mit Zeit, die Strecke mit Start- und Ziel- Kilometerstand, das Kennzeichen und Wetter mittels Toggler Buttons, die Begleitperson und wo gefahren wurde. Die Fahrstrecke wird automatisch berechnet im Formular angezeigt. Wenn der Speicherbutton gedrückt wurde wird mittels einer SQLite DB lokal gespeichert. Eine Onlinesynchronisation in die Google Firebase ist möglich um die Daten zu sichern. Lokal ist der SQLite Speicher Teil der App und kann nicht manuell exportiert und gesichert werden.   \\
+		\hline
+		Akteure &  Begleitperson, Fahrschüler\\
+		\hline
+		Auslöser & Der Button 'manuelles Hinzufügen einer Fahrt' wird gedrückt. \\
+		\hline
+		Vorbedingungen & Die App muss nach der Erstanmeldung gestartet werden. Anschließend ist das Feature im Menü erreichbar. \\
+		\hline
+		Standardablauf & In der Main Page muss der Button in der Mitte gedrückt werden. Anschließend im Untermenü den Button für das manuelle Hinzufügen drücken. Nun kann das Formular ausgefüllt werden. Die Validierung wird farblich unterstützt. Wenn der Button speichern gedrückt wird erscheint nach erfolgreichen Speichern eine Meldung.\\
+		\hline
+	\end{tabularx}
+	\caption{Erstellen und Speichern einer manuell hinzugefügten Fahrt}
+	\label{tab:USE-Case3}
+\end{table}
+
 \subsection{Domain-Class-Modelling}
-Um einen Case im Deail zu beschreiben wurden Ablaufdiagramme verwendet.   
+Um einen Case im Deail zu beschreiben wurden UML-Ablaufdiagramme verwendet. Diese zeigen in eifacher für jeden verständlichen Form den Ablauf eines Features. Weiters wurden diese Features beschrieben.  
 
 
 \begin{figure}[H]
@@ -326,12 +348,6 @@ Um einen Case im Deail zu beschreiben wurden Ablaufdiagramme verwendet.
 	\caption{Ablaufdiagramm GPS}
 	\label{fig:ablaufdiagramm2}
 \end{figure}
-
-\begin{itemize}
-	\item "Dinge" (Rollen, Einheiten, Geräte, Events etc.) identifizieren, um die es im Projekt geht
-	\item ER-Modellierung oder Klassendiagramme
-	\item Zustandsdiagramme (zur Darstellung des Lebenszyklus von Domain-Klassen darstellen)
-\end{itemize}
 
 \newpage
 \subsection{User-Interface-Design}
