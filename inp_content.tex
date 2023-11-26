@@ -162,7 +162,7 @@ Zu Beginn haben wir mittels „Brainstorming“ die wichtigsten Stakeholder iden
 Das Pflichtenheft ist ein wichtiger Bestandteil der Erörterung der Anforderungen des Projektes, wie diese Aufgaben aufgeteilt werden und was für ein Endprodukt dabei entstehen soll.
 
 \subsection{Zielbestimmung}
-Es muss immer ein Produkt konstruiert werden welches die Anforderungen des Kunden und nicht die der Firma erfüllt. In unserem Fall sind die eigentlichen Kunden die User. Dazu dient das Lasten und das Pflichtenheft. In diesen Pflichtenheft werden alle Muss Anforderungen beschrieben, die an diese Software gestellt werde. Weiters werden die Kann Anforderungen beschrieben, die auch vom Kunden kommen. In den Nicht Zielen wird nochmals auf ein paar wichtige Punkte eingegangen für die diese App nicht gedacht ist.
+Es muss immer ein Produkt konstruiert werden welches die Anforderungen des Kunden und nicht die der Firma erfüllt. Dazu dient das Lasten- und das Pflichtenheft. Diese beschreiben das Was und das Wie etwas umgesetzt wird. Im Pflichtenheft werden alle Muss Anforderungen beschrieben, die an diese Software gestellt werde. Weiters werden die Kann Anforderungen beschrieben. Beides kommt vom Kunden. In den Nicht Zielen wird nochmals auf ein paar wichtige Punkte eingegangen für die diese App nicht gedacht ist. In unserem Fall sind die eigentlichen Kunden die User der App.
 
 \subsubsection{IST-Zustand}
 Bis dato gibt es keine App, die das Aufzeichnen des Fahrtenbuchs für den Führerschein mit L-Tafel unabhängig von Fahrschulen und Mitgliedschaften (ÖAMTC) ermöglicht. Des Weiteren gibt es kein weitverbreitetes Tool das dem/der Fahrschüler:in personalisiertes Feedback seines/r bisherigen Fahrten bekommt.
@@ -172,20 +172,18 @@ Eine Smartphone-App für Fahrschüler:innen, welche über GPS - Tracking automa-
 tisch Einträge in einem Fahrtenbuch erstellt. Diese Einträge werden in Form eines
 offiziellen Protokolls exportiert. Das Analysieren der Fahrdaten und Erzeugen von
 Statistiken geben dem/der Fahrschüler:in ein Feedback. Zur Datensicherung steht
-eine Datenbank zur Verfügung. Auch ein manuellen Hinzufügen einer Fahrt soll möglich sein.
+eine Datenbank zur Verfügung. Auch ein manuelles Hinzufügen einer Fahrt soll möglich sein.
 
 \subsubsection{NICHT-Ziele}
 Ziel der Projektarbeit ist es nicht eine Release-Software fertigzustellen. Ein Prototyp der funktioniert ist ausreichend. Die gesammelten Daten werden nur für persönliche Feedbacks verwendet. Es werden keine Daten weitergegeben.
 
 \subsection{Produkteinsatz und Umgebung}
 
-	Das Produkt wird eine Cross-Platform App, welche auf den Betriebssystemen Android und iOS erhältlich sein wird. Let's Drive findet Anwendung bei Fahrschülern/Fahrschülerinnen, welche die L-Tafel oder den L-17 Fahrschein absolvieren wollen. Dienste der App beinhalten z.B. Tracking, Statistik der Fahrten, einfacher Export der Tracking Daten in das Formular für den Fahrschein mit 3000 bzw. 1000 Kilometer. Ein GPS wird für das Tracking benötigt. Eine Internetverbindung ist während einer Fahrt nicht erfordelich. 
-	Zielplattformen sind iOS und Android da diese die üblichen Betriebssysteme sind. 
-	Eine Erweiterung ist mit der gewählten Technologie möglich.
+	Das Produkt wird eine Cross-Platform App, welche auf den Betriebssystemen Android und iOS erhältlich sein wird. Let's Drive findet Anwendung bei Fahrschüler:innen, welche die L-Tafel oder den L-17 Fahrschein absolvieren wollen. Dienste der App beinhalten z.B. Tracking, Statistik der Fahrten, einfacher Export der Tracking Daten in das Formular für den Fahrschein mit 3000 bzw. 1000 Kilometer. Ein GPS wird für das Tracking benötigt. Eine Internetverbindung ist während einer Fahrt nicht erfordelich.
 
 \subsection{Funktionalitäten}
 
-	Es gibt grundsätzlich 2 Arten von Anforderungen. Die welche in der App sein müssen und die welche in der App als zusätzlich sein können. Die Muss Anforderungen müssen natürlich vollständig umgesetzt werden. Weiters gibt es die FURPS - Anforderungen. Das sind funktionale Anforderungen und die nicht für die Funktion der App notwendigen Anforderungen wie Benutzerfreundlichkeit, Zuverlässigkeit, Leistung und Support.
+	Es gibt grundsätzlich 2 Arten von Anforderungen. Die welche in der App sein müssen und die welche in der App sein können. Die Muss Anforderungen müssen natürlich vollständig umgesetzt werden. Weiters gibt es die FURPS - Anforderungen. Das sind funktionale Anforderungen und die nicht für die Funktion der App notwendigen Anforderungen wie Benutzerfreundlichkeit, Zuverlässigkeit, Leistung und Support.
 	\subsubsection{MUSS Anforderungen}
 	\emph{Funktional}
 		\begin{itemize}
@@ -193,15 +191,16 @@ Ziel der Projektarbeit ist es nicht eine Release-Software fertigzustellen. Ein P
 			\item zuverlässige Datenbankaktualisierung
 			\item zuverlässiger pdf Export
 			\item manuelle Einträge unterstützen
-			\item Feedback geben
+			\item Feedback über die aufgezeichneten Fahrten geben
 
 		\end{itemize}
 		
 	\emph{nicht Funktional}
 		\begin{itemize}
-			\item ein ansprechendes Userinterface haben
-			\item eine flüssige Menüführung haben
-			\item erweiterbar sein
+			\item ansprechendes Userinterface
+			\item einfache Menüführung
+			\item flüssige Menüführung
+			\item erweiterbar
 		\end{itemize}
 	
 	\subsubsection{KANN Anforderungen}
@@ -214,24 +213,24 @@ Ziel der Projektarbeit ist es nicht eine Release-Software fertigzustellen. Ein P
 	\emph{nicht Funktional}
 	\begin{itemize}
 		\item verschiedene Designs unterstützen 
-		\item in mehreren Sprachen zur Verfügung gestellt werden
+		\item in mehreren Sprachen verfügbar
 	\end{itemize}
 
 \subsection{Testszenarien und Testfälle}
 
-Unit Tests sind der erste Schritt, danach werden Integrationstests durchgeführt. Nach proof of concept und Abdeckung der meisten Testfälle werden eigenständige Alpha-Tests innerhalb des Entwicklungs-Teams durchgeführt. Dies beinhaltet einen Dev-Account, das Aufzeichnen von Fahrten und der Upload auf die Datenbank. Danach sollen Beta-Tester (Bekannte und Freiwillige) die App testen, indem wir sie für Beta-Tester auf den App-Stores zu Verfügung stellen.
+Unit Tests sind der erste Schritt, danach werden Integrationstests durchgeführt. Nach proof of concept und Abdeckung der meisten Testfälle werden eigenständige Alpha-Tests innerhalb des Entwicklungs-Teams durchgeführt. Dies beinhaltet einen Dev-Account, das Aufzeichnen von Fahrten und der Upload in die Datenbank. Danach sollen Beta-Tester (Bekannte und Freiwillige) die App testen, indem wir sie für Beta-Tester auf den App-Stores zu Verfügung stellen.
 
 \emph{Testfälle}
 \begin{itemize}
-	\item Fahrt starten und aufnehmen
-	\item Fahrt auf die Datenbank hochladen / auf den lokalen Speicher legen
+	\item Fahrt starten und aufnehmen / Die Genauigkeit des Trackings ermitteln
+	\item Fahrt in die Datenbank hochladen / auf den lokalen Speicher legen
 	\item Fahrt abbrechen / während der Fahrt abbrechen
 	\item Fahrt durch den Tunnel / während man kein GPS-Signal hat
 	\item An- und Abmeldung bei mehreren App-Instanzen beim gleichen Account
 	\item Manuelles Löschen und Anlegen von Fahrtenbuch Einträgen
 \end{itemize}
 \subsection{Liefervereinbarung}
-Bereitstellung der App im Apple App-Store, im Google Play Store (und eventuell in der Huawei App-Gallery), damit die App an alle österreichischen Fahrschüler:innen bereitgestellt werden kann.
+Bereitstellung der App im Apple App-Store, im Google Play Store und eventuell in der Huawei App-Gallery. Damit ist die App allen österreichischen Fahrschüler:innen bereitgestellt werden kann.
 
 \newpage
 \section{Problemanalyse}
@@ -239,7 +238,7 @@ In diesem Abschnitt werden mittels UML Diagrammen und Beschreibungen die Funktio
 
 \subsection{USE-Case-Analyse}
 
-USE-Cases, auch Anwendungsfälle genannt, sind eine wichtige Komponente in einer Diplomarbeit. Sie beschreiben, wie ein bestimmtes System oder eine Software in der Praxis eingesetzt wird. Dabei unterscheidet man zwischen benutzerbasierten und ereignisbasierten USE-Cases.
+USE-Cases, auch Anwendungsfälle genannt, sind eine wichtige Komponente in einer Diplomarbeit. Sie beschreiben, wie ein bestimmtes System oder eine Software in der Praxis eingesetzt wird. Auch Zusammenhänge sind ersichtlich. Dabei unterscheidet man zwischen benutzerbasierten und ereignisbasierten USE-Cases.
 
 \subsection{Userstories}
 
@@ -337,16 +336,16 @@ Um einen Case im Deail zu beschreiben wurden UML-Ablaufdiagramme verwendet. Dies
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=10cm]{figures/Ablaufdiagramm1.png}
+	\includegraphics[width=10cm]{figures/Ablaufdiagramm_Fahrtenbuch_LD_APP.png}
 	\caption{Ablaufdiagramm Fahrtenbuch}
-	\label{fig:ablaufdiagramm1}
+	\label{fig:Ablaufdiagramm1}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=11cm]{figures/Ablaufdiagramm2.png}
-	\caption{Ablaufdiagramm GPS}
-	\label{fig:ablaufdiagramm2}
+	\includegraphics[width=11cm]{figures/Ablaufdiagramm_Tracking_LD_APP.png}
+	\caption{Ablaufdiagramm GPS-Tracking}
+	\label{fig:Ablaufdiagramm2}
 \end{figure}
 
 \newpage
