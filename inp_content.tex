@@ -164,17 +164,17 @@ Das Pflichtenheft ist ein wichtiger Bestandteil der Erörterung der Anforderunge
 \subsection{Zielbestimmung}
 Es muss immer ein Produkt konstruiert werden welches die Anforderungen des Kunden und nicht die der Firma erfüllt. Im Pflichtenheft werden alle Muss Anforderungen beschrieben, die an diese Software gestellt werde. Weiters werden die Kann Anforderungen beschrieben. Beides kommt vom Kunden. In den Nicht Zielen wird nochmals auf ein paar wichtige Punkte eingegangen für die diese App nicht gedacht ist. In unserem Fall sind die eigentlichen Kunden die User der App.
 
-\subsubsection{IST-Zustand}
+\subsection{IST-Zustand}
 Bis dato gibt es keine App, die das Aufzeichnen des Fahrtenbuchs für den Führerschein mit L-Tafel unabhängig von Fahrschulen und Mitgliedschaften (ÖAMTC) ermöglicht. Des Weiteren gibt es kein weitverbreitetes Tool das dem/der Fahrschüler:in personalisiertes Feedback seines/r bisherigen Fahrten bekommt.
 
-\subsubsection{SOLL-Zustand}
+\subsection{SOLL-Zustand}
 Eine Smartphone-App für Fahrschüler:innen, welche über GPS - Tracking automa-
 tisch Einträge in einem Fahrtenbuch erstellt. Diese Einträge werden in Form eines
 offiziellen Protokolls exportiert. Das Analysieren der Fahrdaten und Erzeugen von
 Statistiken geben dem/der Fahrschüler:in ein Feedback. Zur Datensicherung steht
 eine Datenbank zur Verfügung. Auch ein manuelles Hinzufügen einer Fahrt soll möglich sein.
 
-\subsubsection{NICHT-Ziele}
+\subsection{NICHT-Ziele}
 Ziel der Projektarbeit ist es nicht eine Release-Software fertigzustellen. Ein Prototyp der funktioniert ist ausreichend. Die gesammelten Daten werden nur für persönliche Feedbacks verwendet. Es werden keine Daten weitergegeben.
 
 \subsection{Produkteinsatz und Umgebung}
@@ -183,44 +183,13 @@ Ziel der Projektarbeit ist es nicht eine Release-Software fertigzustellen. Ein P
 
 \subsection{Funktionalitäten}
 
-	Es gibt grundsätzlich 2 Arten von Anforderungen. Die welche in der App sein müssen und die welche in der App sein können. Die Muss Anforderungen müssen natürlich vollständig umgesetzt werden. Weiters gibt es die FURPS - Anforderungen. Das sind funktionale Anforderungen und die nicht für die Funktion der App notwendigen Anforderungen wie Benutzerfreundlichkeit, Zuverlässigkeit, Leistung und Support.
-	\subsubsection{MUSS Anforderungen}
-	\emph{Funktional}
-		\begin{itemize}
-			\item zuverlässiges und fehlerfreies Tracking der Strecke 
-			\item zuverlässige Datenbankaktualisierung
-			\item zuverlässiger pdf Export
-			\item manuelle Einträge unterstützen
-			\item Feedback über die aufgezeichneten Fahrten geben
-
-		\end{itemize}
-		
-	\emph{nicht Funktional}
-		\begin{itemize}
-			\item ansprechendes Userinterface
-			\item einfache Menüführung
-			\item flüssige Menüführung
-			\item erweiterbar
-		\end{itemize}
-	
-	\subsubsection{KANN Anforderungen}
-	\emph{Funktional}
-		\begin{itemize}
-			\item Prüfungsfahrten simulieren mit Audioausgabe der Strecke
-			\item Erweiterbarkeit des Einsatzbereiches mittels generalisierung der App (Führung eines generellen Fahrtenbuches)
-		\end{itemize}
-
-	\emph{nicht Funktional}
-	\begin{itemize}
-		\item verschiedene Designs unterstützen 
-		\item in mehreren Sprachen verfügbar
-	\end{itemize}
+	Es gibt grundsätzlich 2 Arten von Anforderungen. Diese, die in der App sein müssen und diese, die in der App sein können. Die Muss Anforderungen müssen natürlich vollständig umgesetzt werden. Weiters gibt es die FURPS - Anforderungen. Das sind funktionale Anforderungen und die nicht für die Funktion der App notwendigen Anforderungen wie Benutzerfreundlichkeit, Zuverlässigkeit, Leistung und Support. \par
+	Funktionale MUSS-Anforderungen beinhalten u.A. zuverlässiges und Fehlerfreies Tracking der Strecke, zuverlässige Datenbankaktualisierung, zuverlässiger pdf Export und manuelle Einträge unterstützen Feedback über die aufgezeichneten Fahrten geben. Nicht-Funktionale MUSS-Anforderungen sind ein ansprechendes Userinterface, eine einfache und flüssige Menüführung und Erweiterbarkeit. \par
+	Funktionale KANN-Anforderungen beinhalten Prüfungsfahrten simulieren mit Audioausgabe der Strecke und Erweiterbarkeit des Einsatzbereiches mittels generalisierung der App (Führung eines generellen Fahrtenbuches). Nicht Funktionale umfassen dabei, dass verschiedene Designs gefertigt werden können und die App in mehreren Sprachen verfügbar ist.
 
 \subsection{Testszenarien und Testfälle}
 
 Unit Tests sind der erste Schritt, danach werden Integrationstests durchgeführt. Nach proof of concept und Abdeckung der meisten Testfälle werden eigenständige Alpha-Tests innerhalb des Entwicklungs-Teams durchgeführt. Dies beinhaltet einen Dev-Account, das Aufzeichnen von Fahrten und der Upload in die Datenbank. Danach sollen Beta-Tester (Bekannte und Freiwillige) die App testen, indem wir sie für Beta-Tester auf den App-Stores zu Verfügung stellen.
-
-\emph{Testfälle}
 \begin{itemize}
 	\item Fahrt starten und aufnehmen / Die Genauigkeit des Trackings ermitteln
 	\item Fahrt in die Datenbank hochladen / auf den lokalen Speicher legen
@@ -232,7 +201,6 @@ Unit Tests sind der erste Schritt, danach werden Integrationstests durchgeführt
 \subsection{Liefervereinbarung}
 Bereitstellung der App im Apple App-Store, im Google Play Store und eventuell in der Huawei App-Gallery. Damit ist die App allen österreichischen Fahrschüler:innen bereitgestellt werden kann.
 
-\newpage
 \section{Problemanalyse}
 \label{sec:problemanalyse}
 In diesem Abschnitt werden mittels UML Diagrammen und Beschreibungen die Funktionalitäten beschrieben. Auch das Userinterface wird dargestellt. Eine gründliche Untersuchung dieser Funktionellen und nicht Funktionellen Anforderungen wird dazu beitragen die Wünsche der Benutzer zu definieren um die App nutzerfreundlich und nach Wunsch des Kunden zu designen. Das soll der Grundbaustein für unsere weitere App Entwicklung sein.
@@ -240,18 +208,6 @@ In diesem Abschnitt werden mittels UML Diagrammen und Beschreibungen die Funktio
 \subsection{USE-Case-Analyse}
 
 USE-Cases, auch Anwendungsfälle genannt, sind eine wichtige Komponente in einer Diplomarbeit. Sie beschreiben, wie ein bestimmtes System oder eine Software in der Praxis eingesetzt wird. Auch Zusammenhänge sind ersichtlich. Dabei unterscheidet man zwischen benutzerbasierten und ereignisbasierten USE-Cases.
-
-\subsection{Userstories}
-
-Das folgende UML USE-Case-Diagramm (\ref{fig:USE-Case-Diagramm}) zeigt graphisch die Userstories und wie sie in der Anwendung zusammenhängen.
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=15cm]{figures/usecase_diagramm.png}
-	\caption{USE-Case Diagramm}
-	\label{fig:USE-Case-Diagramm}
-\end{figure}
-
 
 \begin{itemize}
 	\item Ich als Begleitperson möchte die gefahrenen Routen automatisch aufgezeichnet bekommen.
@@ -265,6 +221,16 @@ Das folgende UML USE-Case-Diagramm (\ref{fig:USE-Case-Diagramm}) zeigt graphisch
 	\item Ich als Fahrschule möchte die Validität der gefahrenen Strecken der Fahrschüler:innen sicherstellen können.
 	\item Ich als Fahrschüler:in möchte, wenn es einen Netzausfall oder einen GPS-Ausfall gibt, trotzdem meine Daten absichern und eine Fahrt weiterführen können.
 \end{itemize}
+
+
+Das folgende UML USE-Case-Diagramm (\ref{fig:USE-Case-Diagramm}) zeigt graphisch die Userstories und wie sie in der Anwendung zusammenhängen.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=15cm]{figures/usecase_diagramm.png}
+	\caption{USE-Case Diagramm}
+	\label{fig:USE-Case-Diagramm}
+\end{figure}
 
 Die nachfolgenden schriftlichen Detailbeschreibungen in Tabellen \ref{tab:USE-Case1}, \ref{tab:USE-Case2} zeigen den genauen Ablauf einiger Use-Cases.
 \begin{table}[H]
