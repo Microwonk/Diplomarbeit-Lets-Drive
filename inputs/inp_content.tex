@@ -145,17 +145,18 @@ Zu Beginn haben wir mittels „Brainstorming“ die wichtigsten Stakeholder iden
 
 
 \subsection{Risikoanalyse}
-Die rasante Entwicklung digitaler Anwendungen, insbesondere mobiler Apps, geht mit vielfältigen Risiken einher, die die Sicherheit und Funktionalität beeinträchtigen können. Dieser Abschnitt widmet sich der umfassenden Risikoanalyse von der Let's Drive App, um potenzielle Gefahren zu identifizieren, zu bewerten und geeignete Maßnahmen zur Risikominderung zu erarbeiten. Diese werden anfolgend mittels einer Risikomatrix (Abbildung \ref{fig:Risikomatrix}) und Tabellen (Identifizierung in Tabelle \ref{tab:Identifizierung}, und Einstufung in Tabellen \ref{tab:Risokoeinstufung} \& \ref{tab:Legende}) erörtert und beschrieben.
+Die Entwicklung digitaler Anwendungen, insbesondere mobiler Apps, geht mit vielfältigen Risiken einher, die Sicherheit und Funktionalität beeinträchtigen können. Aber auch externe Einflüsse können ein Projekt gefährden. Dieser Abschnitt widmet sich der umfassenden Risikoanalyse von Let's Drive, um potenzielle Gefahren zu identifizieren, zu bewerten und geeignete Maßnahmen zur Risikominderung zu erarbeiten. Diese werden mittels einer Risikomatrix (Abbildung \ref{fig:Risikomatrix}) und Tabellen (Identifizierung in Tabelle \ref{tab:Identifizierung}, und Einstufung in Tabellen \ref{tab:Risokoeinstufung} \& \ref{tab:Legende}) erörtert und beschrieben.
 
 
-
-Diese Kategorien werden für die Tabelle verwendet
-\begin{itemize}[itemsep=0pt,parsep=0pt]
-	\item \textbf{W} wirtschaftlich
-	\item \textbf{P} produktbezogen
-	\item \textbf{M} menschlich
-	\item \textbf{R} rechtlich
-\end{itemize}
+\begin{minipage}{\textwidth}
+	Diese Kategorien werden für die Tabelle verwendet:
+	\begin{itemize}[itemsep=0pt,parsep=0pt]
+		\item \textbf{W} wirtschaftlich
+		\item \textbf{P} produktbezogen
+		\item \textbf{M} menschlich
+		\item \textbf{R} rechtlich
+	\end{itemize}
+\end{minipage}
 
 \begin{table}[H]
 	\centering
@@ -163,17 +164,17 @@ Diese Kategorien werden für die Tabelle verwendet
 		\hline
 		\textbf{Risiko} & \textbf{Kategorie} & \textbf{Folgen} & \textbf{Maßnahmen} \\
 		\hline
-		Apps der Konkurrenz & W & weniger User & Features verbessern, neue Features \\
+		Konkurrenz ist besser & W & weniger User & Features verbessern, neue Features \\
 		\hline
 		App wird nicht gut angenommen & P, W & weniger User & Marketing, bessere Features \\
 		\hline
 		Tracking für Schüler wird nicht erlaubt & R & Feature fällt weg & Begleitperson übernimmt dieses Feature vollständig \\
 		\hline
-		App ist wirtschaftlich uninteressant & W & geringe Einnahmen & keine, oder Werbung einbauen. Das ist kein Ziel der Projektgruppe \\
+		App ist wirtschaftlich uninteressant & W & geringe Einnahmen & Werbung einbauen. Das ist kein Hauptziel Ziel der Projektgruppe \\
 		\hline
-		Nicht sofort auf allen Plattformen verfügbar & T & Plattform fehlt zu Beginn & Da ein MAC erforderlich ist, diesen Teil der Partnerfirma abgeben \\
+		Das Deployment für alle Plattformen ist von beginn an nicht möglich & T & Plattform fehlt zu Beginn & Da ein MAC erforderlich ist, diesen Teil der Partnerfirma abgeben \\
 		\hline
-		Maui ist ganz neu und wird nicht angenommen & T & kann eine gute oder schlechte Wahl sein & keine  \\
+		Maui ist ein neues Framework und ist nicht in jedem Bereich gleich gut wie andere oder native programmierte Apps & T & kann eine gute oder schlechte Wahl sein & keine  \\
 		\hline
 	\end{tabularx}
 	\caption{Identifizierung der Risiken}
@@ -186,17 +187,17 @@ Diese Kategorien werden für die Tabelle verwendet
 		\hline
 		\textbf{Risiko} & \textbf{Eintritts-wahrsch.} & \textbf{Auswirkung} & \textbf{Risiko-potential} \\
 		\hline
-		Konkurrenz ist besser & 2 & 4 & 8 \\
+		Konkurrenz ist besser & 4 & 8 & 32 \\
 		\hline
-		App wird nicht angenommen & 2 & 4 & 8 \\
+		App wird nicht gut angenommen & 5 & 8 & 40 \\
 		\hline
-		Tracking für Schüler wird nicht erlaubt & 1 & 2 & 2 \\
+		Tracking für Schüler wird nicht erlaubt & 2 & 6 & 12 \\
 		\hline
-		App ist finanziell uninteressant & 2 & 1 & 2 \\
+		App ist wirtschaftlich uninteressant & 8 & 2 & 16 \\
 		\hline
-		Deployment für alle Plattformen & 2 & 2 & 4 \\
+		Das Deployment für alle Plattformen ist von beginn an nicht möglich & 4 & 4 & 16 \\
 		\hline
-		Maui ist ganz neu und wird nicht angenommen & 2 & 2 & 4  \\
+		Maui ist ein neues Framework und ist nicht in jedem Bereich gleich gut wie andere oder native programmierte Apps & 5 & 5 & 25  \\
 		\hline
  	\end{tabularx}
 	\caption{Risikoeinstufung}
@@ -205,19 +206,19 @@ Diese Kategorien werden für die Tabelle verwendet
 
 \begin{table}[h]
 	\centering
-	\begin{tabular}{|c|c|c|c|}
+	\begin{tabular}{|c|c|c|r|}
 		\hline
 		\textbf {} & \textbf{Wahrscheinlichkeit} & \textbf{Auswirkung} & \textbf{Wahrscheinlichkeit x Auswirkung} \\
 		\hline
-		1 & gering 		& gering 		& 1 x 1 = 1 \\
+		1 & gering 		& gering 		& W x A \quad < 20.....\\
 		\hline
-		2 & mittel 		& mittel 		& 2 x 2 =  4 \\
+		2 & mittel 		& mittel 		& W x A \quad = 21-40\\
 		\hline
-		3 & hoch   		& hoch 			& 3 x 3 = 9  \\
+		3 & hoch   		& hoch 			& W x A \quad = 41-60\\
 		\hline
-		4 & hoch 	& sehr hoch		& 4 x 4 = 16 \\
+		4 & hoch 	& sehr hoch			& W x A \quad = 61-80\\
 		\hline
-		4 & sehr hoch 	& katastrophal		& 4 x 4 = 16 \\
+		5 & sehr hoch 	& katastrophal		& W x A \quad  > 81.....\\
 		\hline
 	\end{tabular}
 	\caption{Legende zur Risikoeinstufung}
@@ -228,7 +229,7 @@ Diese Kategorien werden für die Tabelle verwendet
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=15cm]{figures/placeholder.png} %TODO grafik einblenden und beschreiben
+	\includegraphics[width=15cm]{figures/Risikomatrix.png} %TODO grafik einblenden und beschreiben
 	\caption{Risiko Matrix}
 	\label{fig:Risikomatrix}
 \end{figure}
