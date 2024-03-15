@@ -483,21 +483,44 @@ Vorstellung des fertigen Produktes anhand von Screenshots, Bildern, Erklärungen
 \end{itemize}
 
 \chapter{Systementwurf}
-
-
+Die Entscheidung das Cross Plattform Framework .NET Maui zu verwenden haben wir auf Wunsch des Projektpartners getroffen. Dieses Framework ist von Microsoft und die Programmiersprache ist C\# bzw. XAML für das User Interface. Alternativen wie Google-Flutter gibt es viele, wobei wir auch über eine native Programmierung gesprochen haben.
 
 \section{Architektur}
 
-\subsection{testi}
-
-.NET Maui baut auf folgenden Schichtenmodell auf.
+Das Framework .NET Maui unterstützt die Plattformen Windows, Apple iOS, iPadOS, macOS und Google Android. Je nach Zielplattform auf die man den Buildvorgang startet unterscheidet sich die Kompilierung. Im Wesentlichen wird der App Code in C\# geschrieben und ist für alle Zielplattformen gültig (oberste Schicht in Abb. \ref{fig:MauiArchitektur}). Die .NET Zugriffe sind Application Interfaces (kurz API´s) welche beispielsweise plattformunabhängige Hardwarezugriffe sein können. Dieser Zugriff kann auch spezifisch auf eine Zielplattformen geschehen also quasi konsistent. Ein Beispiel dafür ist der in dieser App implementierte Forground-Service für Android welcher nach schließen der App weiterläuft. Die zugrundeliegende Runtime ist die Monoruntime. Diese stellt z.B. einen Just in Time Compiler kurz JIT und einen Ahead of Time Compiler kurz AOT zur Verfügung. Dabei ist ein JIT kein Interpreter da dieser bereits umgewandelten Code Cachen kann und Codeabschnitte anstelle von Codezeilen in Maschinencode übersetzt. Der AOT übersetzt immer alles in Maschinencode was zum Beispiel bei iOS notwendig ist.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{figures/MauiSchichtenmodell.png}
-	\caption{Ablaufplan Let's Drive}
-	\label{fig:Maui Schichtenmodell}
+	\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{figures/MauiArchitektur.png}
+	\caption{Maui App Architektur bzw. Schichtenmodell}
+	\label{fig:MauiArchitektur}
 \end{figure}
+
+\subsection{Android Architektur}
+Bei Android Smartphones wird die Monoruntime (Mono) parallel zur Android Runtime (ART) ausgeführt. Dabei wird der C\# Code in die Intermediate Language übersetzt der durch die Monoruntime zur Ausführungszeit Just In Time in Maschinencode übersetzt wird (Abb. \ref{fig:AndroidArchitektur}). Die Möglichkeit dies wie in Abb. \ref{fig:AppleÜbersetzung} also Ahead of Time zu kompilieren gibt es auch bei Android. 
+  
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{figures/AndroidArchitektur.png}
+	\caption{Android Architektur bzw. Schichtenmodell}
+	\label{fig:AndroidArchitektur}
+\end{figure}
+
+\subsection{.NET Maui unter Apple Betriebssystemen}
+Bei Apple im speziellen bei dieser App dem Betriebssystem iOS muss immer alles in den native Maschinencode kompiliert werden, da Apple das dynamische kompilieren nicht unterstützt. (Abb. \ref{fig:AppleÜbersetzung})
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{figures/AppleÜbersetzung.png}
+	\caption{Ablaufplan Let's Drive}
+	\label{fig:AppleÜbersetzung}
+\end{figure}
+
+
+
+
+
+
 
 \subsection{C4 - Modell}
 
