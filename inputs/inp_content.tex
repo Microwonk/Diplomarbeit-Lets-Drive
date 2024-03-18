@@ -511,10 +511,10 @@ Bei Apple im speziellen bei dieser App dem Betriebssystem iOS muss immer alles i
 
 \chapter{Systementwurf}
 
-Hier wird nun auf die Architektur und die Struktur des Codes eingegangen mit dem die App aufgebaut wurde. Bei der Programmierung ist es sehr wichtig grundsätzliche Designprinzipien einzuhalten um die App Leserlich und Komponenten austauschbar zu halten.
+Hier wird auf die Architektur und die Struktur des Codes eingegangen mit dem die App aufgebaut wurde. Bei der Programmierung ist es sehr wichtig grundsätzliche Designprinzipien einzuhalten um die App Leserlich und Komponenten austauschbar zu halten.
 \section{Softwarearchitektur}
 
-Bei einfachen Maui Apps kann man mit Code behind arbeiten. Das ist einfach gesagt eine Vererbung des XAML Content in eine darunterliegende C\# Datei. So hat man direkten Zugriff auf Variablen im XAML User Interface. Da das Model View View-Model Pattern kurz MVVM für umfangreichere Maui Apps der Standard ist haben wir uns von Beginn an für dieses Design-Pattern entschieden. Hier ist das User Interface (View) der Code welcher dieses manipuliert (View-Model) und die reine Programmlogik (Model) in getrennten Dateien (Namespaces).
+Bei einfachen Maui Apps kann man mit Code behind arbeiten. Das ist einfach gesagt eine Vererbung des XAML Content in eine darunterliegende C\# Datei. So hat man direkten Zugriff auf Variablen der XAML Datei die das UI erzeugt. Da das Model View View-Model Pattern kurz MVVM für umfangreichere Maui Apps der Standard ist haben wir uns von Beginn an für dieses Design-Pattern entschieden. Hier ist das User Interface (View) der Code welcher dieses manipuliert (View-Model) und die reine Programmlogik (Model) in getrennten Klassen ohne Vererbung und unterschiedlichen Dateien (Namespaces) gespeichert.
 \subsection{C4 - Modell}
 
 Beschreibung der Architektur der Software unter Verwendung des C4 Modells: \url{https://c4model.com/}.
@@ -536,7 +536,7 @@ Darstellung und Beschreibung der Systemarchitektur.
 \end{itemize}
 
 \subsection{Benutzerschnittstellen}
-Das Userinterface wurde mit Extendable Application Markup Language kurz XAML programmiert. Das ist der Microsoft Standard und wird in C\# Code kompiliert. Das heißt man könnte das User Interface auch in C\# schreiben. Die Oberfläche wurde so programmiert, dass es auf allen Plattformen gleich ausschaut. Die Menüführung ist allgemein anderen Apps sehr ähnlich. Die Formularvalidierungen funktionieren mit event Listenern und prüfen Eingaben nach jeder Zeicheneingabe. Es wurde immer versucht den Benutzer graphisches Feedback über den Appstatus zu geben.
+Das Userinterface wurde mit Extensible Application Markup Language kurz XAML programmiert. Das ist der Microsoft Standard und wird in C\# Code kompiliert. Das heißt man könnte das User Interface auch in C\# schreiben. Die Oberfläche wurde so programmiert, dass es auf allen Plattformen gleich ausschaut. Die Menüführung ist allgemein anderen Apps sehr ähnlich. Die Formularvalidierungen funktionieren mit event Listenern und prüfen Eingaben nach jeder Zeicheneingabe. Es wurde immer versucht den Benutzer graphisches Feedback über den Appstatus zu geben.
 
 \subsection{Datenhaltunskonzept}
 \begin{itemize}
